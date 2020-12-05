@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, FlatList} from 'react-native';
+import {View, StyleSheet, Text, FlatList, TouchableOpacity} from 'react-native';
 
 const ListScreen = ()=>{
     const friends=[
@@ -24,7 +24,10 @@ const ListScreen = ()=>{
              )
          }} />
     );
+
 };
+
+
 
 const styles = StyleSheet.create({
     textStyle:{
