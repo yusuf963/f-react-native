@@ -1,7 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Button} from 'react-native';
 
-const HomeScreen = (props)=>{
+// props destructring, pulling only the object navigation from the intire big object when console.log it ...  basically its replacing props
+
+const HomeScreen = ({navigation})=>{
   const myName = 'Author: Hassan';
   return(
     <View>
@@ -12,7 +14,7 @@ const HomeScreen = (props)=>{
     _______________________________________________________
       </Text>
 
-      <TouchableOpacity style={styles2.subText} onPress={()=> props.navigation.navigate('List')}>
+      <TouchableOpacity style={styles2.subText} onPress={()=> navigation.navigate('List')}>
 
         <Text>See Coming Matches</Text>
         
@@ -27,9 +29,13 @@ const HomeScreen = (props)=>{
 />
 
       <Button 
-      onPress={()=> props.navigation.navigate('Component')} 
+      onPress={()=> navigation.navigate('Component')} 
       title='Go To Predicting Section'>
+      </Button>
 
+      <Button 
+      onPress={()=> navigation.navigate('Image')} 
+      title='Go to Image'>
       </Button>
 
     </View>
